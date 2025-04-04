@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2025 by original authors @ fontello.com</metadata>
+<defs>
+<font id="motto" horiz-adv-x="1000" >
+<font-face font-family="motto" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="close" unicode="&#xe800;" d="M406 350l-370 370 95 94 369-370 370 370 94-94-370-370 370-370-94-94-370 370-369-370-95 94 370 370z" horiz-adv-x="1000" />
+
+<glyph glyph-name="arrow_right" unicode="&#xe801;" d="M331 350l-300 375 104 83 367-458-367-458-104 83 300 375z" horiz-adv-x="583" />
+
+<glyph glyph-name="question" unicode="&#xe803;" d="M230 137c0 51 5 92 15 123 10 31 24 56 41 75 18 19 42 37 72 55 30 19 54 39 71 61 17 22 25 48 25 77 0 22-5 42-16 59-12 17-27 30-46 40-19 9-40 14-63 14-23 0-43-4-63-13-19-9-35-23-47-42-12-18-19-41-20-67h-160c1 53 15 99 41 136 26 38 61 67 104 86 44 19 92 29 146 29 57 0 108-10 152-30 44-19 79-47 103-83 25-37 37-79 37-127 0-48-12-89-35-124-23-34-57-64-101-90-25-15-46-30-61-46-15-16-26-34-34-55-7-21-11-47-11-78v-11h-150v11z m79-284c-18 0-34 4-50 13-15 9-27 20-36 35-9 15-14 31-14 48 0 17 5 33 14 47 9 15 21 27 36 35 16 9 32 13 50 13 17 0 33-4 48-13 16-8 28-20 37-35 9-14 14-30 14-47 0-17-5-33-14-48-9-15-21-26-37-35-15-9-31-13-48-13z" horiz-adv-x="667" />
+</font>
+</defs>
+</svg>
