@@ -50,3 +50,30 @@
   opacity: 0.6;
 }
 
+.btn[disabled] {
+  background-color: #cccccc !important;
+  color: #666;
+  border: none;
+}
+
+.slot-container {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.lotto-ball {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
