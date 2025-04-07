@@ -41,3 +41,7 @@
 .selectbox-draw {
 }
 
+#mobile-header {
+  z-index: 99;
+}
+
