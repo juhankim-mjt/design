@@ -110,3 +110,29 @@
   background-color: #ff8490;
 }
 
+.ticket-num-txt {
+  position: absolute;
+  top: 50%;
+  right: 28%;
+  transform: translateY(-50%);
+}
+
+#img-ticket {
+  position: relative;
+}
+
+body {
+  min-width: 320px;
+}
+
+.roulette-number {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 32px;
+  font-weight: bold;
+  animation: slotRoll 0.5s ease-in-out;
+}
+
+@keyframes slotRoll {
+}
+
