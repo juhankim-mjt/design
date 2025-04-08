@@ -105,8 +105,8 @@
             <div class="col" style="padding: 0;">
                 <div class="accordion" role="tablist" id="accordion-2" style="margin-top: 8px;">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-1" aria-expanded="true" aria-controls="accordion-2 .item-1" style="font-weight: bold;">전체 당첨현황</button></h2>
-                        <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-2">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-1" aria-expanded="false" aria-controls="accordion-2 .item-1" style="font-weight: bold;">전체 당첨현황</button></h2>
+                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-2">
                             <div class="accordion-body">
                                 <div class="table-responsive" style="font-size: 14px;text-align: center;">
                                     <table class="table">
@@ -120,28 +120,28 @@
                                         <tbody>
                                             <tr>
                                                 <td>1등</td>
-                                                <td>0</td>
-                                                <td style="text-align: right;">1,000만원<br>(인당 #,###원)</td>
+                                                <td id="winner-1">0</td>
+                                                <td id="winner-1-prize" style="text-align: right;">1,000만원<br>(인당 #,###원)</td>
                                             </tr>
                                             <tr>
                                                 <td>2등</td>
-                                                <td>0</td>
-                                                <td style="text-align: right;">100만원<br>(인당 #,###원)</td>
+                                                <td id="winner-2">0</td>
+                                                <td id="winner-2-prize" style="text-align: right;">100만원<br>(인당 #,###원)</td>
                                             </tr>
                                             <tr>
                                                 <td>3등</td>
-                                                <td>0</td>
-                                                <td style="text-align: right;">10만원<br>(인당 #,###원)</td>
+                                                <td id="winner-3">0</td>
+                                                <td id="winner-3-prize" style="text-align: right;">10만원<br>(인당 #,###원)</td>
                                             </tr>
                                             <tr>
                                                 <td>4등</td>
-                                                <td>4</td>
-                                                <td style="text-align: right;">이용권 100장</td>
+                                                <td id="winner-4">4</td>
+                                                <td id="winner-4-prize" style="text-align: right;">이용권 100장</td>
                                             </tr>
                                             <tr>
                                                 <td>5등</td>
-                                                <td>119</td>
-                                                <td style="text-align: right;">이용권 20장</td>
+                                                <td id="winner-5">119</td>
+                                                <td id="winner-5-prize" style="text-align: right;">이용권 20장</td>
                                             </tr>
                                         </tbody>
                                     </table>
