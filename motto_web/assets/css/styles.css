@@ -78,7 +78,9 @@
   font-weight: bold;
   border-radius: 50%;
   transition: none;
+  color: #333333;
   margin: 0 auto;
+  line-height: 29px;
 }
 
 .ball-strip {
@@ -86,5 +88,25 @@
   flex-direction: column;
   transition: transform 0.3s ease-out;
   will-change: transform;
+}
+
+.lotto-ball.ball-yellow {
+  background-color: #fbc400;
+}
+
+.lotto-ball.ball-gray {
+  background-color: #aaaaaa;
+}
+
+.lotto-ball.ball-blue {
+  background-color: #69c8f2;
+}
+
+.lotto-ball.ball-green {
+  background-color: #b0d840;
+}
+
+.lotto-ball.ball-red {
+  background-color: #ff8490;
 }
 

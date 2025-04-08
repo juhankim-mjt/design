@@ -1,22 +1,27 @@
+let multiBtn = document.getElementById("multi-draw-btn");
+let singleBtn = document.getElementById("single-draw-btn");
 const slotContainers = document.querySelectorAll(".ball-strip");
-const multiBtn = document.getElementById("multi-draw-btn");
-const singleBtn = document.getElementById("single-draw-btn");
+
+let finalLottoNumbers = [];
+let isConfirmed = false;
+let multiResults = [];
+let currentDrawType = "single"; // "single" 또는 "multi"
+let isAnimating = false;
 
 function getColor(number) {
-  if (number >= 1 && number <= 10) return "#fbc400";
-  if (number >= 11 && number <= 20) return "#69c8f2";
-  if (number >= 21 && number <= 30) return "#ff7272";
-  if (number >= 31 && number <= 40) return "#aaa";
-  if (number >= 41 && number <= 45) return "#b0d840";
-  return "#fff";
+  if (number <= 10) return "#fbc400";
+  if (number <= 20) return "#69c8f2";
+  if (number <= 30) return "#ff7272";
+  if (number <= 40) return "#aaa";
+  return "#b0d840";
 }
 
 function getRandomNumbers() {
-  const numbers = new Set();
-  while (numbers.size < 6) {
-    numbers.add(Math.floor(Math.random() * 45) + 1);
+  const set = new Set();
+  while (set.size < 6) {
+    set.add(Math.floor(Math.random() * 45) + 1);
   }
-  return Array.from(numbers).sort((a, b) => a - b);
+  return Array.from(set).sort((a, b) => a - b);
 }
 
 async function animateBallSlot(slot, finalNumber, delay = 0) {
@@ -24,77 +29,104 @@ async function animateBallSlot(slot, finalNumber, delay = 0) {
   const totalBalls = 20 + Math.floor(Math.random() * 10);
   const ballStrip = slot;
 
-  // reset style before animation
   ballStrip.style.transition = "none";
   ballStrip.style.transform = "translateY(0)";
   ballStrip.innerHTML = "";
 
-  // 가짜 공: 색은 다양하고 내용은 "?"
   for (let i = 0; i < totalBalls; i++) {
     const randomNum = Math.floor(Math.random() * 45) + 1;
-    const fakeBall = document.createElement("div");
-    fakeBall.className = "lotto-ball";
-    fakeBall.style.backgroundColor = getColor(randomNum);
-    fakeBall.textContent = "?";
-    fakeBall.style.height = "30px";
-    fakeBall.style.width = "30px";
-    fakeBall.style.lineHeight = "30px";
-    fakeBall.style.textAlign = "center";
-    ballStrip.appendChild(fakeBall);
+    const ball = document.createElement("div");
+    ball.className = "lotto-ball";
+    ball.textContent = "?";
+    ball.style.backgroundColor = getColor(randomNum);
+    Object.assign(ball.style, {
+      height: "30px", width: "30px", lineHeight: "30px", textAlign: "center"
+    });
+    ballStrip.appendChild(ball);
   }
 
-  // 진짜 공 (마지막에 숫자 보여주기)
   const finalBall = document.createElement("div");
   finalBall.className = "lotto-ball";
-  finalBall.style.backgroundColor = getColor(finalNumber);
   finalBall.textContent = finalNumber;
-  finalBall.style.height = "30px";
-  finalBall.style.width = "30px";
-  finalBall.style.lineHeight = "30px";
-  finalBall.style.textAlign = "center";
+  finalBall.style.backgroundColor = getColor(finalNumber);
+  Object.assign(finalBall.style, {
+    height: "30px", width: "30px", lineHeight: "30px", textAlign: "center"
+  });
   ballStrip.appendChild(finalBall);
 
-  // 대기
-  await new Promise((res) => setTimeout(res, delay));
-
-  // 애니메이션
+  await new Promise(r => setTimeout(r, delay));
   const moveDistance = ballHeight * totalBalls;
   ballStrip.style.transition = "transform 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
   ballStrip.style.transform = `translateY(-${moveDistance}px)`;
-
-  // 애니메이션 끝날 때까지 대기
-  await new Promise((res) => setTimeout(res, 1200));
+  await new Promise(r => setTimeout(r, 1200));
 }
 
-async function animateBalls() {
-  const numbers = getRandomNumbers();
+async function animateBalls(numbers = null) {
+  isConfirmed = false;
+  isAnimating = true;
+  disableButtons(true);
+
+  const drawNumbers = numbers || getRandomNumbers();
+
   for (let i = 0; i < slotContainers.length; i++) {
-    await animateBallSlot(slotContainers[i], numbers[i], i * 200);
+    await animateBallSlot(slotContainers[i], drawNumbers[i], i * 200);
   }
 
-  // 버튼 상태 변경
-  multiBtn.id = "try-again-btn";
-  multiBtn.textContent = "다시 시도";
+  if (currentDrawType === "single") {
+    finalLottoNumbers = drawNumbers;
+    console.log("1회 추첨 결과:", finalLottoNumbers);
+  }
 
-  singleBtn.id = "confirm-draw-btn";
-  singleBtn.textContent = "확정하기";
+  updateButtons(currentDrawType);
+  isAnimating = false;
+  disableButtons(false);
+}
 
-  // 다시 시도 버튼 이벤트 설정
-  const tryAgainBtn = document.getElementById("try-again-btn");
-  tryAgainBtn.addEventListener("click", () => {
-    resetBalls();
-    animateBalls();
+function updateButtons(type) {
+  let againBtn = document.getElementById("try-again-btn") || document.getElementById("multi-draw-btn");
+  let confirmBtn = document.getElementById("confirm-draw-btn") || document.getElementById("single-draw-btn");
+
+  againBtn.id = "try-again-btn";
+  againBtn.innerHTML = `<i class="fas fa-redo" style="margin-right: 8px;"></i>다시 시도`;
+  againBtn.removeAttribute("data-bs-toggle");
+  againBtn.removeAttribute("data-bs-target");
+
+  confirmBtn.id = "confirm-draw-btn";
+  confirmBtn.innerHTML = `<i class="fas fa-check" style="margin-right: 8px;"></i>확정하기`;
+
+  againBtn.replaceWith(againBtn.cloneNode(true));
+  confirmBtn.replaceWith(confirmBtn.cloneNode(true));
+
+  document.getElementById("try-again-btn").addEventListener("click", () => {
+    if (!isConfirmed && !isAnimating) {
+      resetBalls();
+      if (currentDrawType === "single") {
+        animateBalls();
+      } else {
+        startMultiDraw();
+      }
+    }
   });
 
-  // 확정 버튼 이벤트 설정
-  const confirmBtn = document.getElementById("confirm-draw-btn");
-  confirmBtn.addEventListener("click", () => {
-    alert("선택이 확정되었습니다!");
+  document.getElementById("confirm-draw-btn").addEventListener("click", () => {
+    if (isConfirmed) return;
+
+    if (type === "single") {
+      const modal = document.getElementById("modal-single");
+      const instance = new bootstrap.Modal(modal);
+      instance.show();
+    } else if (type === "multi") {
+      const modal = document.getElementById("modal-multi");
+      const instance = new bootstrap.Modal(modal);
+      instance.show();
+    }
+
+    isConfirmed = true;
   });
 }
 
 function resetBalls() {
-  slotContainers.forEach((strip) => {
+  slotContainers.forEach(strip => {
     strip.style.transition = "none";
     strip.style.transform = "translateY(0)";
     strip.innerHTML = "";
@@ -103,13 +135,76 @@ function resetBalls() {
     defaultBall.className = "lotto-ball";
     defaultBall.textContent = "?";
     defaultBall.style.backgroundColor = "#eee";
-    defaultBall.style.height = "30px";
-    defaultBall.style.width = "30px";
-    defaultBall.style.lineHeight = "30px";
-    defaultBall.style.textAlign = "center";
+    Object.assign(defaultBall.style, {
+      height: "30px", width: "30px", lineHeight: "30px", textAlign: "center"
+    });
     strip.appendChild(defaultBall);
   });
 }
 
-// 첫 발급 버튼 이벤트
-singleBtn.addEventListener("click", animateBalls);
+function disableButtons(disable = true) {
+  document.querySelectorAll("button").forEach(btn => {
+    btn.disabled = disable;
+  });
+}
+
+singleBtn.addEventListener("click", () => {
+  if (isAnimating) return;
+  currentDrawType = "single";
+  animateBalls();
+});
+
+multiBtn.addEventListener("click", () => {
+  const modal = document.getElementById("modal-multi-check");
+  const instance = new bootstrap.Modal(modal);
+  instance.show();
+});
+
+document.getElementById("multi-draw-go-btn").addEventListener("click", () => {
+  const modalEl = document.getElementById("modal-multi-check");
+  const modalInstance = bootstrap.Modal.getInstance(modalEl);
+
+  const onHidden = async () => {
+    modalEl.removeEventListener("hidden.bs.modal", onHidden);
+    document.querySelectorAll(".modal-backdrop").forEach(el => el.remove());
+
+    currentDrawType = "multi";
+    await startMultiDraw();
+  };
+
+  modalEl.addEventListener("hidden.bs.modal", onHidden);
+  modalInstance.hide();
+});
+
+async function startMultiDraw() {
+  resetBalls();
+
+  isAnimating = true;
+  disableButtons(true);
+
+  const firstNumbers = getRandomNumbers();
+  await animateBalls(firstNumbers);
+
+  multiResults = [firstNumbers];
+  for (let i = 0; i < 9; i++) {
+    multiResults.push(getRandomNumbers());
+  }
+
+  console.log("총 10세트 결과:", multiResults);
+  isAnimating = false;
+  disableButtons(false);
+}
+
+// 취소 버튼에 해당하는 ID가 있다고 가정할게 (예: multi-draw-cancel-btn)
+document.getElementById("multi-draw-cancel-btn").addEventListener("click", () => {
+  const modalEl = document.getElementById("modal-multi-check");
+  const modalInstance = bootstrap.Modal.getInstance(modalEl);
+
+  const onHidden = () => {
+    modalEl.removeEventListener("hidden.bs.modal", onHidden);
+    document.querySelectorAll(".modal-backdrop").forEach(el => el.remove());
+  };
+
+  modalEl.addEventListener("hidden.bs.modal", onHidden);
+  modalInstance.hide(); // 수동으로 닫아줌
+});
