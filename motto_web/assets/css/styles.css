@@ -60,20 +60,31 @@
   width: 30px;
   height: 30px;
   overflow: hidden;
-  border-radius: 50%;
   position: relative;
+}
+
+.slot-container ::after {
+  /*content: "";*/
+  /*position: absolute;*/
+  /*background: linear-gradient;*/
 }
 
 .lotto-ball {
   width: 30px;
   height: 30px;
+  flex-direction: column;
   text-align: center;
-  line-height: 30px;
+  box-shadow: inset 4px 4px 6px rgba(255,255,255,0.95), inset -1px -4px 10px rgba(0,0,0,0.44) !important;
   font-weight: bold;
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-  position: absolute;
-  top: 0;
-  left: 0;
+  transition: none;
+  margin: 0 auto;
+}
+
+.ball-strip {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
 }
 
