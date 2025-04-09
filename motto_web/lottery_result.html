@@ -12,16 +12,16 @@
 </head>
 
 <body style="background: rgb(232,234,244);">
-    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center" id="mobile-header" style="width: 100%;border-radius: 0;color: rgb(136,136,136);padding: 0;padding-top: 8px;padding-bottom: 8px;background: #ffffff;position: fixed;"><i 
+    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center mobile-header"><i 
   class="fas fa-angle-left" 
   onclick="history.back()" 
   style="padding: 16px; padding-right: 20px; padding-left: 20px; cursor: pointer;"
-></i><span style="margin-left: 8px;font-weight: bold;color: rgb(0,0,0);">당첨번호</span><i class="fas fa-question-circle"
+></i><span style="margin-left: 8px;font-weight: bold;color: rgb(0,0,0);">당첨번호</span><i class="fas fa-question-circle guide-btn"
    onclick="window.location.href='guidepage.html'"
    style="cursor: pointer; padding: 16px 20px;"></i></div>
     <div class="col" style="width: 100%;max-width: 480px;margin: 0 auto;">
         <div class="row flex-column" style="width: 100%;margin: 0 auto;padding: 16px;padding-top: 83px;">
-            <div class="col text-center"><select id="selectbox-draw" class="selectbox-draw" style="font-size: 16px;padding: 16px;font-weight: bold;border-radius: 16px;">
+            <div class="col text-center"><select id="selectboxDraw" class="selectbox-draw" style="font-size: 16px;padding: 16px;font-weight: bold;border-radius: 16px;">
                     <optgroup label="회차 선택">
                         <option value="1164" selected="">제 1165회차 당첨번호</option>
                         <option value="1164">제 1164회차 당첨번호</option>
@@ -30,83 +30,67 @@
                 </select></div>
             <div class="col-10 offset-0 d-flex justify-content-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;">
                 <div class="row">
-                    <div class="col d-flex flex-column justify-content-between align-items-start" style="padding: 0;"><span id="draw-result-date-txt" style="margin-left: 8px;font-weight: bold;font-size: 16px;color: rgb(81,95,171);">당첨발표 2025년 1월 6일</span></div>
+                    <div class="col d-flex flex-column justify-content-between align-items-start" style="padding: 0;"><span id="drawResultDateTxt" class="draw-result-date-txt" style="margin-left: 8px;font-weight: bold;font-size: 16px;color: rgb(81,95,171);">당첨발표 2025년 1월 6일</span></div>
                 </div>
             </div>
-            <div class="col-lg-12 d-flex d-lg-flex justify-content-around align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: linear-gradient(116deg, #ddf2fe, rgb(200,221,255) 8%, rgb(200,218,255) 92%, #ddf2fe), #c5cae1;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 12px;border: 2.5px solid var(--bs-primary);box-shadow: inset -1px 8px 7px rgba(19,38,139,0.34);">
+            <div class="col-lg-12 d-flex d-lg-flex justify-content-around align-items-center justify-content-lg-start align-items-lg-center lottery-bar" style="width: 100%;border-radius: 16px;color: rgb(136,136,136);margin-top: 12px;border: 2.5px none var(--bs-primary);">
                 <div class="row d-flex justify-content-center" style="width: 100%;">
                     <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;">
                         <div class="slot-container">
-                            <div class="ball-strip" style="width: 30px;height: 30px;"><span class="lotto-ball" style="background: #fbc400;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">1</span></div>
+                            <div class="ball-strip" style="width: 30px;height: 30px;"><span class="lotto-ball ball-yellow">1</span></div>
                         </div>
                         <div class="slot-container">
-                            <div class="ball-strip"><span class="lotto-ball" style="background: #aaa;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">33</span></div>
+                            <div class="ball-strip"><span class="lotto-ball ball-gray">33</span></div>
                         </div>
                         <div class="slot-container">
-                            <div class="ball-strip"><span class="lotto-ball" style="background: #69c8f2;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">33</span></div>
+                            <div class="ball-strip"><span class="lotto-ball ball-blue">33</span></div>
                         </div>
                         <div class="slot-container">
-                            <div class="ball-strip"><span class="lotto-ball" style="background: #b0d840;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">41</span></div>
+                            <div class="ball-strip"><span class="lotto-ball ball-green">41</span></div>
                         </div>
                         <div class="slot-container">
-                            <div class="ball-strip"><span class="lotto-ball" style="background: #ff8490;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">24</span></div>
+                            <div class="ball-strip"><span class="lotto-ball ball-red">24</span></div>
                         </div>
                         <div class="slot-container">
-                            <div class="ball-strip"><span class="lotto-ball" style="background: #aaa;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">33</span></div>
+                            <div class="ball-strip"><span class="lotto-ball ball-gray">33</span></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col" style="padding: 0;padding-top: 8px;"><img src="assets/img/banner_vod.svg" style="width: 100%;"></div>
+            <div class="col" style="padding: 0;padding-top: 8px;"><img class="banner-vod" src="assets/img/banner_vod.svg" style="width: 100%;"></div>
             <div class="col-10 offset-0 d-flex justify-content-between" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;">
                 <div class="row" style="width: 100%;margin: 0;">
                     <div class="col-auto d-flex justify-content-start" style="width: fit-content;">
-                        <h1 class="d-flex align-items-center" style="font-weight: bold;font-size: 16px;color: rgb(0,0,0);width: fit-content;">나의 당첨 내역</h1>
+                        <h1 class="d-flex align-items-center title-big">나의 당첨 내역</h1>
                     </div>
-                    <div class="col text-end d-flex flex-column justify-content-between align-items-end" style="padding-right: 0;"><span style="margin-left: 8px;font-size: 12px;color: rgb(81,95,171);text-align: right;">지급기한 내 수령하지 않으면<br>당첨금은 사라져요.</span><span id="payment-due-date" style="margin-left: 8px;font-size: 12px;color: rgb(81,95,171);text-align: right;font-weight: bold;">지급기한: 2025년 2월 6일</span></div>
+                    <div class="col text-end d-flex flex-column justify-content-between align-items-end" style="padding-right: 0;"><span style="margin-left: 8px;font-size: 12px;color: rgb(81,95,171);text-align: right;">지급기한 내 수령하지 않으면<br>당첨금은 사라져요.</span><span id="paymentDueDate" class="payment-due-date">지급기한: 2025년 2월 6일</span></div>
                 </div>
             </div>
-            <div class="col-12 offset-0 d-flex flex-column justify-content-center align-items-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;padding-top: 24px;padding-bottom: 24px;background: rgba(255,255,255,0.45);"><img src="assets/img/img_confetti.svg" width="70%"><span style="margin-left: 8px;font-size: 16px;color: rgb(81,95,171);text-align: center;">당첨을 축하합니다.</span></div>
-            <div class="col-12 offset-0 d-flex flex-column justify-content-center align-items-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;background: rgba(255,255,255,0.45);padding-top: 24px;padding-bottom: 24px;"><img src="assets/img/img_empty.svg" width="70%"><span style="margin-left: 8px;font-size: 16px;color: rgb(81,95,171);text-align: center;">이번 회차는 아쉽게 당첨번호가 없어요</span></div>
+            <div class="col-12 offset-0 d-flex flex-column justify-content-center align-items-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;padding-top: 24px;padding-bottom: 24px;background: rgba(255,255,255,0.45);"><img class="img-confetti" src="assets/img/img_confetti.svg" width="70%"><span style="margin-left: 8px;font-size: 16px;color: rgb(81,95,171);text-align: center;">당첨을 축하합니다.</span></div>
+            <div class="col-12 offset-0 d-flex flex-column justify-content-center align-items-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;background: rgba(255,255,255,0.45);padding-top: 24px;padding-bottom: 24px;"><img class="img-empty" src="assets/img/img_empty.svg" width="70%"><span style="margin-left: 8px;font-size: 16px;color: rgb(81,95,171);text-align: center;">이번 회차는 아쉽게 당첨번호가 없어요</span></div>
             <div class="col-lg-12 d-flex d-lg-flex flex-column justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: #ffffff;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 4.5px none rgb(215,218,234);">
                 <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;">
                     <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;"><span class="lotto-ball ball-yellow" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border-width: 5px;border-style: none;">1</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">31</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">33</span><span class="lotto-ball ball-blue" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #9AB5FF;">20</span><span class="lotto-ball ball-green" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #90EC87 ;">41</span><span class="lotto-ball ball-red" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #FF8490;">24</span></div>
-                    <div class="col d-flex justify-content-between align-items-center" style="padding: 0;margin-top: 16px;"><button class="btn btn-primary" type="button" style="font-size: 16px;padding: 12px;width: 100%;background: rgb(4,82,200);font-weight: bold;"><span style="font-weight: bold;margin-right: 8px;">1등</span>수령신청</button></div>
-                </div>
-            </div>
-            <div class="col-lg-12 d-flex d-lg-flex flex-column justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: #ffffff;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 4.5px none rgb(215,218,234);">
-                <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;">
-                    <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;"><span class="lotto-ball ball-yellow" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border-width: 5px;border-style: none;">1</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">31</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">33</span><span class="lotto-ball ball-blue" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #9AB5FF;">20</span><span class="lotto-ball ball-green" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #90EC87 ;">41</span><span class="lotto-ball ball-red" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #FF8490;">24</span></div>
-                    <div class="col d-flex justify-content-between align-items-center" style="padding: 0;margin-top: 16px;"><button class="btn btn-primary" type="button" style="font-size: 16px;padding: 12px;width: 100%;background: rgb(4,82,200);font-weight: bold;"><span style="font-weight: bold;margin-right: 8px;">3등</span>수령신청</button></div>
+                    <div class="col d-flex justify-content-between align-items-center" style="padding: 0;margin-top: 16px;"><button class="btn btn-primary request-btn" type="button"><span style="font-weight: bold;margin-right: 8px;">1등</span>수령신청</button></div>
                 </div>
             </div>
             <div class="col-lg-12 d-flex d-lg-flex flex-column justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: #ffffff;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 4.5px none rgb(215,218,234);">
                 <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;">
                     <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;"><span class="lotto-ball ball-yellow" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border-width: 5px;border-style: none;">1</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">31</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">33</span><span class="lotto-ball ball-blue" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #9AB5FF;">20</span><span class="lotto-ball ball-green" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #90EC87 ;">41</span><span class="lotto-ball ball-red" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #FF8490;">24</span></div>
-                    <div class="col d-flex justify-content-between align-items-center" style="padding: 0;margin-top: 16px;"><button class="btn btn-primary" type="button" style="font-size: 16px;padding: 12px;width: 100%;background: rgb(255,255,255);font-weight: bold;color: rgb(4,82,200);border-style: solid;"><span style="font-weight: bold;margin-right: 8px;">4등</span>이용권 100장</button></div>
+                    <div class="col d-flex justify-content-between align-items-center" style="padding: 0;margin-top: 16px;"><button class="btn btn-primary request-btn" type="button"><span style="font-weight: bold;margin-right: 8px;">3등</span>수령신청</button></div>
                 </div>
             </div>
-            <div class="col" style="padding: 0;">
-                <div class="accordion" role="tablist" id="accordion-1" style="margin-top: 24px;">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1" style="font-weight: bold;">나의 당첨 내역</button></h2>
-                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
-                            <div class="accordion-body"><span style="margin-left: 8px;font-size: 12px;color: rgb(81,95,171);text-align: center;">당첨일: 2025년 2월 6일</span>
-                                <div class="col-lg-12 d-flex d-lg-flex justify-content-around align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: #f4f4f4;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 4.5px none rgb(215,218,234);">
-                                    <div class="row d-flex justify-content-center" style="width: 100%;">
-                                        <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;"><span class="lotto-ball ball-yellow" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border-width: 5px;border-style: none;">1</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">31</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">33</span><span class="lotto-ball ball-blue" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #9AB5FF;">20</span><span class="lotto-ball ball-green" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #90EC87 ;">41</span><span class="lotto-ball ball-red" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #FF8490;">24</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-12 d-flex d-lg-flex flex-column justify-content-center align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: #ffffff;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 4.5px none rgb(215,218,234);">
+                <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;">
+                    <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;"><span class="lotto-ball ball-yellow" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border-width: 5px;border-style: none;">1</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">31</span><span class="lotto-ball ball-gray" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #CFCFCF;">33</span><span class="lotto-ball ball-blue" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #9AB5FF;">20</span><span class="lotto-ball ball-green" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #90EC87 ;">41</span><span class="lotto-ball ball-red" style="width: 32px;height: 32px;border-radius: 29px;text-align: center;font-weight: bold;font-size: 14px;border: 5px none #FF8490;">24</span></div>
+                    <div class="col d-flex justify-content-between align-items-center" style="padding: 0;margin-top: 16px;"><button class="btn btn-primary request-low-btn" type="button"><span style="font-weight: bold;margin-right: 8px;">4등</span>이용권 100장</button></div>
                 </div>
             </div>
             <div class="col" style="padding: 0;">
                 <div class="accordion" role="tablist" id="accordion-2" style="margin-top: 8px;">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-1" aria-expanded="false" aria-controls="accordion-2 .item-1" style="font-weight: bold;">전체 당첨현황</button></h2>
-                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-2">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-1" aria-expanded="true" aria-controls="accordion-2 .item-1" style="font-weight: bold;">전체 당첨현황</button></h2>
+                        <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-2">
                             <div class="accordion-body">
                                 <div class="table-responsive" style="font-size: 14px;text-align: center;">
                                     <table class="table">

@@ -41,8 +41,16 @@
 .selectbox-draw {
 }
 
-#mobile-header {
+.mobile-header {
   z-index: 99;
+  width: 100%;
+  border-radius: 0;
+  color: rgb(136,136,136);
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #ffffff;
+  position: fixed;
 }
 
 .strike {
@@ -74,13 +82,12 @@
   height: 30px;
   flex-direction: column;
   text-align: center;
-  box-shadow: inset 4px 4px 6px rgba(255,255,255,0.95), inset -1px -4px 10px rgba(0,0,0,0.44) !important;
   font-weight: bold;
   border-radius: 50%;
   transition: none;
   color: #333333;
   margin: 0 auto;
-  line-height: 29px;
+  line-height: 31px;
 }
 
 .ball-strip {
@@ -134,5 +141,114 @@ body {
 }
 
 @keyframes slotRoll {
+}
+
+.lottery-bar {
+  background-color: #e8eaf4;
+  padding: 16px;
+}
+
+.lottery-num-bar {
+  margin-top: 8px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 16px;
+  background: #d6daf2;
+}
+
+.lotterybar-normal {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  color: rgb(136,136,136);
+  margin-top: 8px;
+  border: 4.5px none rgb(215,218,234);
+}
+
+.lottery-date {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: rgb(141,154,220);
+  padding-right: 0;
+  border-color: #8d9adc;
+}
+
+.my-tickets {
+  margin-left: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(6,82,200);
+}
+
+.title-big {
+  margin-left: 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 16px 0;
+}
+
+.guide-btn {
+}
+
+.main-cardbox {
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid rgb(204,204,204);
+  padding-top: 0px;
+}
+
+.time-bar {
+  font-weight: bold;
+  background: #f06b4c;
+  color: rgb(255,255,255);
+  padding: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 24px;
+  border-width: 4px;
+  border-color: #f06b4c;
+  border-bottom-width: 4px;
+  border-bottom-color: #f06b4c;
+  font-size: 14px;
+}
+
+.ticket-num-txt {
+  background: rgba(255,255,255,0.79);
+  padding: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 80px;
+  box-shadow: inset 0px 3px 5px rgba(11,68,125,0.72);
+}
+
+.payment-due-date {
+  margin-left: 8px;
+  font-size: 12px;
+  color: rgb(81,95,171);
+  text-align: right;
+  font-weight: bold;
+}
+
+.request-btn {
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  background: rgb(4,82,200);
+  font-weight: bold;
+}
+
+.request-low-btn {
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  background: rgb(255,255,255);
+  font-weight: bold;
+  color: rgb(4,82,200);
+  border-style: solid;
 }
 

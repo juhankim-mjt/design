@@ -12,16 +12,16 @@
 </head>
 
 <body style="background: rgb(232,234,244);">
-    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center" id="mobile-header" style="width: 100%;border-radius: 0;color: rgb(136,136,136);padding: 0;padding-top: 8px;padding-bottom: 8px;background: #ffffff;position: fixed;"><i 
+    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center mobile-header"><i 
   class="fas fa-angle-left" 
   onclick="history.back()" 
   style="padding: 16px; padding-right: 20px; padding-left: 20px; cursor: pointer;"
-></i><span style="margin-left: 8px;font-weight: bold;color: rgb(0,0,0);">모또</span><i class="fas fa-question-circle"
+></i><span style="margin-left: 8px;font-weight: bold;color: rgb(0,0,0);">모또</span><i class="fas fa-question-circle guide-btn"
    onclick="window.location.href='guidepage.html'"
    style="cursor: pointer; padding: 16px 20px;"></i></div>
     <div class="col" style="width: 100%;max-width: 480px;margin: 0 auto;padding-bottom: 120px;">
         <div class="row" style="width: 100%;margin: 0 auto;padding: 16px;padding-top: 83px;background: #e8eaf4;">
-            <div class="col-lg-12" style="width: 100%;background: #d9ddef;border-radius: 8px;padding: 16px;color: rgb(136,136,136);padding-top: 8px;padding-bottom: 8px;"><i class="fas fa-bullhorn" style="color: rgb(129,148,215);background: #d6dff2;padding: 8px;border-radius: 16px;"></i><div class="marquee-container">
+            <div class="col-lg-12" id="notibar" style="width: 100%;background: #d9ddef;border-radius: 8px;padding: 16px;color: rgb(136,136,136);padding-top: 8px;padding-bottom: 8px;"><i class="fas fa-bullhorn" style="color: rgb(129,148,215);background: #d6dff2;padding: 8px;border-radius: 16px;"></i><div class="marquee-container">
   <div class="marquee-content">
     <div class="marquee-item">당첨상품은 회차별로 변동될 수 있어요</div>
     <div class="marquee-item">모또 발급 이용권은 해당 회차별로만 사용 가능합니다.</div>
@@ -30,31 +30,31 @@
 </div></div>
             <div class="col offset-0" style="margin-top: 8px;border-radius: 8px;"><img src="assets/img/img_top.svg" style="width: 100%;"><img class="d-flex justify-content-center" src="assets/img/ball_spin.svg" style="width: 50%;margin: 0 auto;margin-top: -26px;margin-bottom: -62px;">
                 <div class="row">
-                    <div class="col d-flex justify-content-between align-items-center" style="padding-right: 0;margin-bottom: 4px;"><span style="margin-left: 0;font-weight: bold;font-size: 16px;">제 1,154회차</span><span style="font-weight: bold;background: #f06b4c;color: rgb(255,255,255);padding: 8px;padding-right: 10px;padding-left: 10px;border-radius: 24px;border-width: 4px;border-color: #f06b4c;border-bottom-width: 4px;border-bottom-color: #f06b4c;font-size: 14px;"><i class="far fa-clock" style="margin-right: 8px;"></i>4일 1시 45분 남음</span></div>
+                    <div class="col d-flex justify-content-between align-items-center" style="padding-right: 0;margin-bottom: 4px;"><span style="margin-left: 0;font-weight: bold;font-size: 16px;">제 1,154회차</span><span id="timebar" class="time-bar"><i class="far fa-clock" style="margin-right: 8px;"></i>4일 1시 45분 남음</span></div>
                 </div>
             </div>
             <div class="col-12">
-                <div class="row d-flex justify-content-end" style="background: #ffffff;padding: 8px;border-radius: 16px;border: 1px solid rgb(204,204,204);padding-top: 0px;">
-                    <div class="col-lg-12 d-flex d-lg-flex justify-content-around align-items-center justify-content-lg-start align-items-lg-center" style="width: 100%;background: linear-gradient(116deg, #ddf2fe, rgb(200,221,255) 8%, rgb(200,218,255) 92%, #ddf2fe), #c5cae1;border-radius: 16px;padding: 16px;color: rgb(136,136,136);margin-top: 12px;border: 2.5px solid var(--bs-primary);box-shadow: inset -1px 8px 7px rgba(19,38,139,0.34);">
+                <div class="row d-flex justify-content-end main-cardbox">
+                    <div class="col-lg-12 d-flex d-lg-flex justify-content-around align-items-center justify-content-lg-start align-items-lg-center lottery-bar" style="width: 100%;border-radius: 16px;color: rgb(136,136,136);margin-top: 12px;border: 2.5px none var(--bs-primary);">
                         <div class="row d-flex justify-content-center" style="width: 100%;">
                             <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;">
                                 <div class="slot-container">
-                                    <div class="ball-strip" style="width: 30px;height: 30px;"><span class="lotto-ball" style="background: #fbc400;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">?</span></div>
+                                    <div class="ball-strip" style="width: 30px;height: 30px;"><span class="lotto-ball ball-yellow">?</span></div>
                                 </div>
                                 <div class="slot-container">
-                                    <div class="ball-strip"><span class="lotto-ball" style="background: #aaa;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">?</span></div>
+                                    <div class="ball-strip"><span class="lotto-ball ball-gray">?</span></div>
                                 </div>
                                 <div class="slot-container">
-                                    <div class="ball-strip"><span class="lotto-ball" style="background: #69c8f2;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">?</span></div>
+                                    <div class="ball-strip"><span class="lotto-ball ball-blue">?</span></div>
                                 </div>
                                 <div class="slot-container">
-                                    <div class="ball-strip"><span class="lotto-ball" style="background: #b0d840;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">?</span></div>
+                                    <div class="ball-strip"><span class="lotto-ball ball-green">?</span></div>
                                 </div>
                                 <div class="slot-container">
-                                    <div class="ball-strip"><span class="lotto-ball" style="background: #ff8490;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">?</span></div>
+                                    <div class="ball-strip"><span class="lotto-ball ball-red">?</span></div>
                                 </div>
                                 <div class="slot-container">
-                                    <div class="ball-strip"><span class="lotto-ball" style="background: #aaa;width: 30px;height: 30px;border-radius: 29px;text-align: center;font-weight: bold;line-height: 29px;box-shadow: inset 0px -5px 6px rgba(0,0,0,0.43);border-width: 5px;border-color: #FFEB86;color: rgba(0,0,0,0.51);">?</span></div>
+                                    <div class="ball-strip"><span class="lotto-ball ball-gray">?</span></div>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div><div 
-  class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center" 
+  class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn" 
   data-bs-toggle="modal"
   data-bs-target="#modal-campaign"
   style="cursor: pointer; width: 100%; border-radius: 8px; padding: 16px; color: rgb(136,136,136); margin-top: 16px; background: #ffffff; border: 1px solid rgb(204,204,204);"
@@ -81,7 +81,7 @@
   </span>
   <i class="fas fa-chevron-right" style="color: rgb(205,205,205); padding: 8px; border-radius: 16px;"></i>
 </div><div 
-  class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center" 
+  class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn" 
   onclick="window.location.href='check.html'"
   style="cursor: pointer; width: 100%; border-radius: 8px; padding: 16px; color: rgb(136,136,136); margin-top: 8px; border: 1px solid rgb(204,204,204); background: #ffffff;"
 >
@@ -90,8 +90,8 @@
     나의 발급 행운번호
   </span>
   <i class="fas fa-chevron-right" style="color: rgb(205,205,205); padding: 8px; border-radius: 16px;"></i>
-</div><div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center"  onclick="window.location.href='lottery_result.html'"
-  style="cursor: pointer; width: 100%;border-radius: 8px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 1px solid rgb(204,204,204);background: #ffffff;"><span style="margin-left: 0;font-weight: bold;font-size: 16px;color: #333333;"><i class="fas fa-check-circle" style="color: rgb(92,190,95);background: #ebf5e1;padding: 8px;border-radius: 16px;margin-right: 8px;"></i>두근 두근 당첨 확인</span><i class="fas fa-chevron-right" style="color: rgb(205,205,205);padding: 8px;border-radius: 16px;"></i></div><div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center"  onclick="window.location.href='winners.html'"
+</div><div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn"  onclick="window.location.href='lottery_result.html'"
+  style="cursor: pointer; width: 100%;border-radius: 8px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 1px solid rgb(204,204,204);background: #ffffff;"><span style="margin-left: 0;font-weight: bold;font-size: 16px;color: #333333;"><i class="fas fa-check-circle" style="color: rgb(92,190,95);background: #ebf5e1;padding: 8px;border-radius: 16px;margin-right: 8px;"></i>두근 두근 당첨 확인</span><i class="fas fa-chevron-right" style="color: rgb(205,205,205);padding: 8px;border-radius: 16px;"></i></div><div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn"  onclick="window.location.href='winners.html'"
   style="cursor: pointer; width: 100%;border-radius: 8px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 1px solid rgb(204,204,204);background: #ffffff;">
     <span style="margin-left: 0;font-weight: bold;font-size: 16px;color: #333333;">
         <i class="fas fa-crown" style="color: rgb(225,182,97);background: #fff7eb;padding: 8px 6px;border-radius: 16px;margin-right: 8px;"></i>
@@ -155,7 +155,7 @@
             <div class="modal-content">
                 <div class="modal-body" style="text-align: center;">
                     <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">제 1167회차</p>
-                    <div class="d-flex flex-column" id="img-ticket"><img src="assets/img/img_get_ticket.svg" style="margin: 0 auto;text-align: center;width: 100%;"><span class="ticket-num-txt" style="background: rgba(255,255,255,0.79);padding: 8px;border-radius: 4px;font-weight: bold;width: 50px;box-shadow: inset 0px 3px 5px rgba(11,68,125,0.72);">1장</span></div>
+                    <div class="d-flex flex-column" id="img-ticket"><img src="assets/img/img_get_ticket.svg" style="margin: 0 auto;text-align: center;width: 100%;"><span class="ticket-num-txt">1장</span></div>
                     <p class="text-center" id="resultText" style="font-weight: bold;font-size: 16px;margin-bottom: 0;margin-top: 0;">이용권 캠페인을 불러오는 중입니다.</p>
                     <p class="text-center" id="resultTextInfo" style="font-size: 14px;color: rgba(33,37,41,0.54);">잠시만 기다려 주세요</p>
                 </div>
