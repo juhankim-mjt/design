@@ -252,3 +252,18 @@ body {
   border-style: solid;
 }
 
+.input-basic {
+  width: 100%;
+  padding: 16px;
+}
+
+#errorTxt {
+  color: #f06b4c;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.img-addone {
+  width: 100px;
+}
+

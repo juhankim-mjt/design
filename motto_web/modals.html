@@ -21,7 +21,72 @@
    style="cursor: pointer; padding: 16px 20px;"></i></div>
     <div class="col" style="width: 100%;max-width: 480px;margin: 0 auto;">
         <div class="row flex-column" style="width: 100%;margin: 0 auto;padding: 16px;padding-top: 83px;">
-            <div class="col-12 offset-0 d-flex flex-column justify-content-center align-items-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;background: #d6daf2;padding-top: 24px;padding-bottom: 24px;"><img src="assets/img/img_empty.svg" width="50%"><span style="margin-left: 8px;font-size: 12px;color: rgb(81,95,171);text-align: center;">Sample Page</span></div>
+            <div class="col"><button class="btn btn-primary" type="button" style="padding: 16px;width: 100%;margin-top: 8px;" data-bs-target="#modalAttendance" data-bs-toggle="modal">출석 체크</button><button class="btn btn-primary" type="button" style="padding: 16px;width: 100%;margin-top: 8px;" data-bs-target="#modalError" data-bs-toggle="modal">에러</button><button class="btn btn-primary" type="button" style="padding: 16px;width: 100%;margin-top: 8px;" data-bs-target="#modalRequestPrize" data-bs-toggle="modal">당첨 수령신청</button><button class="btn btn-primary" type="button" style="padding: 16px;width: 100%;margin-top: 8px;" data-bs-target="#modalRequestPrizeComplete" data-bs-toggle="modal">당첨 수령신청 완료</button><button class="btn btn-primary" type="button" style="padding: 16px;width: 100%;margin-top: 8px;" data-bs-target="#modalGetTicket" data-bs-toggle="modal">이용권 사용자</button></div>
+        </div>
+    </div>
+    <div class="modal fade modal-attendance" role="dialog" tabindex="-1" id="modalAttendance">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;"><img class="img-addone" src="assets/img/img__addone.svg" style="margin: 0 auto;text-align: center;margin-bottom: 8px;margin-top: 8px;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">출석체크</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">이용권 1장을 획득했습니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" type="button" style="background: #0252c8;font-weight: bold;padding: 12px 12px;" data-bs-target="#modal-campaign" data-bs-toggle="modal">확인</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-error" role="dialog" tabindex="-1" id="modalError">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;">
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">정상적으로 처리되지 않았습니다.<br>다시 시도해주세요</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" type="button" style="background: #0252c8;font-weight: bold;padding: 12px 12px;" data-bs-target="#modal-error" data-bs-toggle="modal">확인</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-request-prize" role="dialog" tabindex="-1" id="modalRequestPrize">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">당첨 수령 신청</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">휴대폰 번호를 정확히 입력해 주세요</p><input type="text" class="input-basic" placeholder="성함" style="margin-bottom: 8px;" required=""><input type="text" class="input-basic" placeholder="-제외 연락받을 번호 입력" required="">
+                    <p class="text-center error-txt" id="errorTxt">입력을 확인해주세요</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" type="button" style="height: 52px;background: #d9ddef;font-weight: bold;margin-right: 4px;color: #8d9adc;border-style: none;" data-bs-toggle="modal" data-bs-target="#modal-request-prize">취소</button><button class="btn btn-primary flex-fill" type="submit" style="background: #0252c8;font-weight: bold;padding: 12px 12px;margin-left: 4px;" data-bs-target="#modal-request-prize" data-bs-toggle="modal">확인</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-request-prize-modalRequestPrize-complete" role="dialog" tabindex="-1" id="modalRequestPrizeComplete">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">신청 완료</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">정상적으로 신청 완료되었습니다.</p><input type="text" class="input-basic" placeholder="kimjuhan" style="margin-bottom: 8px;" required="" disabled=""><input type="text" class="input-basic" placeholder="01012341234" required="" disabled="">
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" type="submit" style="background: #0252c8;font-weight: bold;padding: 12px 12px;" data-bs-target="#modal-request-prize" data-bs-toggle="modal">확인</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modal-get-ticket" role="dialog" tabindex="-1" id="modalGetTicket">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">지급 예정</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">이용권 당첨자는 자동으로<br>다음 회차 이용권으로 지급처리 됩니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" type="submit" style="background: #0252c8;font-weight: bold;padding: 12px 12px;" data-bs-target="#modalGetTicket" data-bs-toggle="modal">확인</button></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
