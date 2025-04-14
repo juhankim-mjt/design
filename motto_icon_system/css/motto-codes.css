@@ -18,3 +18,7 @@
 .icon-box-fill:before { content: '\e810'; } /* '' */
 .icon-check-line:before { content: '\e811'; } /* '' */
 .icon-check-circle-fill:before { content: '\e812'; } /* '' */
+.icon-line-scan:before { content: '\e813'; } /* '' */
+.icon-photo:before { content: '\e814'; } /* '' */
+.icon-qr-scan:before { content: '\e815'; } /* '' */
+.icon-camera:before { content: '\e816'; } /* '' */
