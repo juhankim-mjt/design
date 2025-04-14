@@ -34,7 +34,7 @@
 
 <glyph glyph-name="arrow-left" unicode="&#xe80d;" d="M432 319l318 384-110 85-390-469 390-469 110 85-318 384z" horiz-adv-x="1000" />
 
-<glyph glyph-name="arrow-up-1" unicode="&#xe80e;" d="M469 282l384 318 85-110-469-390-469 390 85 110 384-318z" horiz-adv-x="1000" />
+<glyph glyph-name="arrow-down" unicode="&#xe80e;" d="M469 282l384 318 85-110-469-390-469 390 85 110 384-318z" horiz-adv-x="1000" />
 
 <glyph glyph-name="arrow-up" unicode="&#xe80f;" d="M469 419l384-319 85 110-469 390-469-390 85-110 384 319z" horiz-adv-x="1000" />
 
