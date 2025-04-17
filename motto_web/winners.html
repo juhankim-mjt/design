@@ -11,22 +11,190 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="background: rgb(232,234,244);">
-    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center mobile-header"><i 
+<body style="background: var(--main-color-10);">
+    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center mobile-header">
+        <div>
+        <i 
   class="fas fa-angle-left" 
   onclick="history.back()" 
   style="padding: 16px; padding-right: 20px; padding-left: 20px; cursor: pointer;"
-></i><span style="margin-left: 8px;font-weight: bold;color: rgb(0,0,0);">명예의 전당</span><i class="fas fa-question-circle guide-btn"
-   onclick="window.location.href='guidepage.html'"
-   style="cursor: pointer; padding: 16px 20px;"></i></div>
-    <div class="col" style="width: 100%;max-width: 480px;margin: 0 auto;">
-        <div class="row flex-column" style="width: 100%;margin: 0 auto;padding: 16px;padding-top: 83px;">
-            <div class="col-12 offset-0 d-flex flex-column justify-content-center align-items-center" style="margin-top: 8px;border-radius: 8px;width: 100%;padding: 8px;background: #d6daf2;padding-top: 24px;padding-bottom: 24px;"><img src="assets/img/img_empty.svg" width="50%"><span style="margin-left: 8px;font-size: 12px;color: rgb(81,95,171);text-align: center;">Sample Page</span></div>
+></i><span style="margin-left: 8px;font-weight: bold;color: rgb(0,0,0);">테마 설정</span></div>
+
+<div id="color-picker-menu">
+<label for="colorPicker">메인 컬러 선택:</label>
+  <input type="color" id="colorPicker" value="#ffffff" />
+</div>
+</div>
+    <div class="col" style="width: 100%;max-width: 480px;margin: 0 auto;padding-bottom: 120px;">
+        <div class="row" style="width: 100%;margin: 0 auto;padding: 16px;padding-top: 83px;">
+            <div class="col-lg-12" id="notibar" style="width: 100%;background: var(--main-color-10);border-radius: 8px;padding: 16px;color: rgb(136,136,136);padding-top: 8px;padding-bottom: 8px;"><i class="fas fa-bullhorn" style="color: var(--main-color-60);background: var(--main-color-20);padding: 8px;border-radius: 16px;"></i><div class="marquee-container">
+  <div class="marquee-content">
+    <div class="marquee-item">당첨상품은 회차별로 변동될 수 있어요</div>
+    <div class="marquee-item">모또 발급 이용권은 해당 회차별로만 사용 가능합니다.</div>
+    <div class="marquee-item">당첨상품은 회차별로 변동될 수 있어요</div>
+  </div>
+</div></div>
+            <div class="col offset-0" style="margin-top: 8px;border-radius: 8px;"><img src="assets/img/img_top.svg" style="width: 100%;"><img class="d-flex justify-content-center" src="assets/img/ball_spin.svg" style="width: 50%;margin: 0 auto;margin-top: -26px;margin-bottom: -62px;">
+                <div class="row">
+                    <div class="col d-flex justify-content-between align-items-center" style="padding-right: 0;margin-bottom: 4px;"><span style="margin-left: 0;font-weight: bold;font-size: 16px;">제 1,154회차</span><span id="timebar" class="time-bar"><i class="far fa-clock" style="margin-right: 8px;"></i>4일 1시 45분 남음</span></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row d-flex justify-content-end main-cardbox">
+                    <div class="col-lg-12 d-flex d-lg-flex justify-content-around align-items-center justify-content-lg-start align-items-lg-center lottery-bar" style="width: 100%;border-radius: 16px;color: rgb(136,136,136);margin-top: 12px;border: 2.5px none var(--bs-primary);">
+                        <div class="row d-flex justify-content-center" style="width: 100%;">
+                            <div class="col d-flex justify-content-around align-items-center" style="width: 100%;padding: 0;">
+                                <div class="slot-container">
+                                    <div class="ball-strip" style="width: 30px;height: 30px;"><span class="lotto-ball ball-yellow">?</span></div>
+                                </div>
+                                <div class="slot-container">
+                                    <div class="ball-strip"><span class="lotto-ball ball-gray">?</span></div>
+                                </div>
+                                <div class="slot-container">
+                                    <div class="ball-strip"><span class="lotto-ball ball-blue">?</span></div>
+                                </div>
+                                <div class="slot-container">
+                                    <div class="ball-strip"><span class="lotto-ball ball-green">?</span></div>
+                                </div>
+                                <div class="slot-container">
+                                    <div class="ball-strip"><span class="lotto-ball ball-red">?</span></div>
+                                </div>
+                                <div class="slot-container">
+                                    <div class="ball-strip"><span class="lotto-ball ball-gray">?</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center align-items-lg-center" style="border-radius: 24px;padding: 4px;color: rgb(0,0,0);margin-top: 12px;position: relative;margin-bottom: 8px;border: 3.5px none var(--bs-warning);padding-right: 12px;"><span style="margin-left: 0;font-weight: bold;font-size: 14px;">나의 이용권</span><a class="text-decoration-none" data-bs-target="#modal-empty" data-bs-toggle="modal"><span id="mytickets" style="margin-left: 0;font-weight: bold;font-size: 14px;color: rgb(0, 0, 0);"><i class="fas fa-ticket-alt" style="color: var(--main-color-60); padding: 8px;border-radius: 16px;margin-right: 8px;background: var(--main-color-10);"></i>보유 3장</span></a></div>
+                    <div class="col-12">
+                        <div class="row d-flex flex-row justify-content-between">
+                            <div class="col d-flex align-items-center" style="padding-right: 0;padding-left: 0;"><span style="width: 100%;" title="10장 보유시 전체 발급"><button class="btn btn-primary" id="multi-draw-btn" type="button" style="background: var(--main-color-70);height: 50px; border-color: transparent; width: 98%;font-weight: bold;" data-bs-target="#modal-multi-check" data-bs-toggle="modal"><i class="fas fa-ticket-alt" style="padding: 8px;border-radius: 16px;margin-right: 8px;"></i>10회 발급</button></span></div>
+                            <div class="col d-flex justify-content-end align-items-center" style="padding-right: 0;padding-left: 0;"><button class="btn btn-primary" id="single-draw-btn" type="button" style="background: var(--main-color); border-color: transparent; height: 50px;width: 98%;font-weight: bold;"><i class="fas fa-ticket-alt" style="padding: 8px;border-radius: 16px;margin-right: 8px;"></i>1회 발급</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div><div 
+  class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn" 
+  data-bs-toggle="modal"
+  data-bs-target="#modal-campaign"
+  style="cursor: pointer; width: 100%; border-radius: 8px; padding: 16px; color: rgb(136,136,136); margin-top: 16px; background: #ffffff; border: 1px solid rgb(204,204,204);"
+>
+  <span style="margin-left: 0; font-weight: bold; font-size: 16px; color: #333333;">
+    <i class="fas fa-parking" style="color: rgb(215,129,139); background: #f2d6d6; padding: 8px; border-radius: 16px; margin-right: 8px;"></i>
+    포인트 + 
+    <i class="fas fa-ticket-alt" style="color: rgb(8,82,200); background: #d3e1f7; padding: 8px; border-radius: 16px; margin-right: 8px;"></i>
+    이용권 받기
+  </span>
+  <i class="fas fa-chevron-right" style="color: rgb(205,205,205); padding: 8px; border-radius: 16px;"></i>
+</div><div 
+  class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn" 
+  onclick="window.location.href='check.html'"
+  style="cursor: pointer; width: 100%; border-radius: 8px; padding: 16px; color: rgb(136,136,136); margin-top: 8px; border: 1px solid rgb(204,204,204); background: #ffffff;"
+>
+  <span style="margin-left: 0; font-weight: bold; font-size: 16px; color: #333333;">
+    <i class="fas fa-ticket-alt" style="color: rgb(8,82,200); background: #d3e1f7; padding: 8px; border-radius: 16px; margin-right: 8px;"></i>
+    나의 발급 행운번호
+  </span>
+  <i class="fas fa-chevron-right" style="color: rgb(205,205,205); padding: 8px; border-radius: 16px;"></i>
+</div><div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn"  onclick="window.location.href='lottery_result.html'"
+  style="cursor: pointer; width: 100%;border-radius: 8px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 1px solid rgb(204,204,204);background: #ffffff;"><span style="margin-left: 0;font-weight: bold;font-size: 16px;color: #333333;"><i class="fas fa-check-circle" style="color: rgb(92,190,95);background: #ebf5e1;padding: 8px;border-radius: 16px;margin-right: 8px;"></i>두근 두근 당첨 확인</span><i class="fas fa-chevron-right" style="color: rgb(205,205,205);padding: 8px;border-radius: 16px;"></i></div><div class="col-lg-12 d-flex d-lg-flex justify-content-between align-items-center justify-content-lg-start align-items-lg-center main-list-btn"  onclick="window.location.href='winners.html'"
+  style="cursor: pointer; width: 100%;border-radius: 8px;padding: 16px;color: rgb(136,136,136);margin-top: 8px;border: 1px solid rgb(204,204,204);background: #ffffff;">
+    <span style="margin-left: 0;font-weight: bold;font-size: 16px;color: #333333;">
+        <i class="fas fa-crown" style="color: rgb(225,182,97);background: #fff7eb;padding: 8px 6px;border-radius: 16px;margin-right: 8px;"></i>
+        명예의 전당</span><i class="fas fa-chevron-right" style="color: rgb(205,205,205);padding: 8px;border-radius: 16px;"></i></div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-single">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;"><img src="assets/img/img_single.svg" style="margin: 0 auto;text-align: center;margin-bottom: 8px;width: 70%;margin-top: 8px;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">선택 번호가 발급 처리되었습니다.</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">나의 발급 행운번호에서 확인 가능합니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><a class="btn btn-primary flex-fill" role="button" style="margin-left: 4px;background: var(--main-color); border-color: transparent; font-weight: bold;padding: 12px;" data-bs-target="check.html" href="check.html">확인</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-multi">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;"><img src="assets/img/img_multi.svg" style="margin: 0 auto;text-align: center;margin-bottom: 8px;width: 70%;margin-top: 8px;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">보유한 이용권 10개가<br>자동 발급 처리되었습니다.</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">나의 발급 행운번호에서 확인 가능합니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><a class="btn btn-primary flex-fill" role="button" style="margin-left: 4px;background: var(--main-color);border-color: transparent; font-weight: bold;padding: 12px;" data-bs-target="check.html" href="check.html">확인</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-multi-check">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;"><img src="assets/img/img_multi_check.svg" style="margin: 0 auto;text-align: center;margin-bottom: 8px;width: 70%;margin-top: 8px;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">자동 10회 발급</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">보유한 이용권 10개가 자동 발급 처리됩니다.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" id="multi-draw-cancel-btn" type="button" style="height: 52px;background: #d9ddef;font-weight: bold;margin-right: 4px;color: #8d9adc;border-style: none;" data-bs-target="#modal-multi-check" data-bs-toggle="modal">취소</button><button class="btn btn-primary flex-fill" id="multi-draw-go-btn" type="button" style="height: 52px;margin-left: 4px;background: var(--main-color);font-weight: bold;" data-bs-target="check.html">발급하기</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-empty">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;"><img src="assets/img/img_empty.svg" style="margin: 0 auto;text-align: center;margin-bottom: 8px;width: 70%;margin-top: 8px;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">보유한 이용권이 없어요.</p>
+                    <p class="text-center" style="font-size: 14px;color: rgba(33,37,41,0.54);">이용권 받기를 확인해보세요</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><button class="btn btn-primary flex-fill" type="button" style="height: 52px;background: var(--main-color-10);font-weight: bold;margin-right: 4px;color: var(--main-color-60);border-style: none;" data-bs-toggle="modal" data-bs-target="#modal-empty">취소</button><button class="btn btn-primary flex-fill" type="button" style="margin-left: 4px;border-color: transparent; background: var(--main-color);font-weight: bold;padding: 12px 12px;" data-bs-target="#modal-campaign" data-bs-toggle="modal">포인트+이용권 받기</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-campaign">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align: center;">
+                    <p class="text-center" style="font-weight: bold;font-size: 16px;margin-bottom: 0;">제 1167회차</p>
+                    <div class="d-flex flex-column" id="img-ticket"><img src="assets/img/img_get_ticket.svg" style="margin: 0 auto;text-align: center;width: 100%;"><span class="ticket-num-txt">1장</span></div>
+                    <p class="text-center" id="resultText" style="font-weight: bold;font-size: 16px;margin-bottom: 0;margin-top: 0;">이용권 캠페인을 불러오는 중입니다.</p>
+                    <p class="text-center" id="resultTextInfo" style="font-size: 14px;color: rgba(33,37,41,0.54);">잠시만 기다려 주세요</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex justify-content-between align-items-center"><a class="btn btn-primary d-none flex-fill" role="button" id="go-campaign-btn" style="margin-left: 4px;border-color: transparent; background: var(--main-color);font-weight: bold;padding: 12px 12px;" href="campaign.html">확인</a></div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/getballs.js"></script>
     <script src="assets/js/gettickets.js"></script>
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const root = document.documentElement;
+    
+        function hexToRgb(hex) {
+          const cleanHex = hex.replace('#', '');
+          const bigint = parseInt(cleanHex, 16);
+          const r = (bigint >> 16) & 255;
+          const g = (bigint >> 8) & 255;
+          const b = bigint & 255;
+          return `${r}, ${g}, ${b}`;
+        }
+    
+        colorPicker.addEventListener('input', function () {
+          const hex = this.value;
+          const rgb = hexToRgb(hex);
+          root.style.setProperty('--main-color-rgb', rgb);
+          root.style.setProperty('--main-color', `rgb(${rgb})`);
+          root.style.setProperty('--main-color-50', `rgba(${rgb}, 0.5)`);
+        });
+      </script>
 </body>
 
 </html>

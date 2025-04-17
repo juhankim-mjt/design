@@ -1,17 +1,19 @@
-<svg width="416" height="299" viewBox="0 0 416 299" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="63" y="79" width="290" height="141" rx="16" fill="url(#paint0_linear_36_1570)"/>
-<rect x="63.5" y="79.5" width="289" height="140" rx="15.5" stroke="white" stroke-opacity="0.96"/>
-<rect x="63.5" y="79.5" width="289" height="140" rx="15.5" stroke="#434EC6" stroke-opacity="0.39"/>
-<rect x="94" y="144" width="12" height="12" rx="6" fill="#FDE985"/>
-<rect x="136" y="144" width="12" height="12" rx="6" fill="white"/>
-<rect x="178" y="144" width="12" height="12" rx="6" fill="#9AB5FF"/>
-<rect x="220" y="144" width="12" height="12" rx="6" fill="#8EEB86"/>
-<rect x="262" y="144" width="12" height="12" rx="6" fill="#FD838F"/>
-<rect x="304" y="144" width="12" height="12" rx="6" fill="white"/>
-<rect x="250" y="102" width="83" height="16" rx="5" fill="white" fill-opacity="0.2"/>
-<rect x="82" y="190" width="251" height="16" rx="5" fill="white" fill-opacity="0.2"/>
+<svg width="416" height="300" viewBox="0 0 416 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="img_get_ticket">
+<path id="Vector" d="M337 79.5H79C70.1634 79.5 63 86.6634 63 95.5V204.5C63 213.337 70.1634 220.5 79 220.5H337C345.837 220.5 353 213.337 353 204.5V95.5C353 86.6634 345.837 79.5 337 79.5Z" fill="url(#paint0_linear_73_770)"/>
+<path id="Vector_2" d="M337 80H79C70.4396 80 63.5 86.9396 63.5 95.5V204.5C63.5 213.06 70.4396 220 79 220H337C345.56 220 352.5 213.06 352.5 204.5V95.5C352.5 86.9396 345.56 80 337 80Z" stroke="white" stroke-opacity="0.96"/>
+<path id="Vector_3" d="M337 80H79C70.4396 80 63.5 86.9396 63.5 95.5V204.5C63.5 213.06 70.4396 220 79 220H337C345.56 220 352.5 213.06 352.5 204.5V95.5C352.5 86.9396 345.56 80 337 80Z" stroke="#434EC6" stroke-opacity="0.39"/>
+<path id="Vector_4" d="M106 150.5C106 147.186 103.314 144.5 100 144.5C96.6863 144.5 94 147.186 94 150.5C94 153.814 96.6863 156.5 100 156.5C103.314 156.5 106 153.814 106 150.5Z" fill="#FDE985"/>
+<path id="Vector_5" d="M148 150.5C148 147.186 145.314 144.5 142 144.5C138.686 144.5 136 147.186 136 150.5C136 153.814 138.686 156.5 142 156.5C145.314 156.5 148 153.814 148 150.5Z" fill="white"/>
+<path id="Vector_6" d="M190 150.5C190 147.186 187.314 144.5 184 144.5C180.686 144.5 178 147.186 178 150.5C178 153.814 180.686 156.5 184 156.5C187.314 156.5 190 153.814 190 150.5Z" fill="#9AB5FF"/>
+<path id="Vector_7" d="M232 150.5C232 147.186 229.314 144.5 226 144.5C222.686 144.5 220 147.186 220 150.5C220 153.814 222.686 156.5 226 156.5C229.314 156.5 232 153.814 232 150.5Z" fill="#8EEB86"/>
+<path id="Vector_8" d="M274 150.5C274 147.186 271.314 144.5 268 144.5C264.686 144.5 262 147.186 262 150.5C262 153.814 264.686 156.5 268 156.5C271.314 156.5 274 153.814 274 150.5Z" fill="#FD838F"/>
+<path id="Vector_9" d="M316 150.5C316 147.186 313.314 144.5 310 144.5C306.686 144.5 304 147.186 304 150.5C304 153.814 306.686 156.5 310 156.5C313.314 156.5 316 153.814 316 150.5Z" fill="white"/>
+<path id="Vector_10" d="M328 102.5H255C252.239 102.5 250 104.739 250 107.5V113.5C250 116.261 252.239 118.5 255 118.5H328C330.761 118.5 333 116.261 333 113.5V107.5C333 104.739 330.761 102.5 328 102.5Z" fill="white" fill-opacity="0.2"/>
+<path id="Vector_11" d="M328 190.5H87C84.2386 190.5 82 192.739 82 195.5V201.5C82 204.261 84.2386 206.5 87 206.5H328C330.761 206.5 333 204.261 333 201.5V195.5C333 192.739 330.761 190.5 328 190.5Z" fill="white" fill-opacity="0.2"/>
+</g>
 <defs>
-<linearGradient id="paint0_linear_36_1570" x1="69.174" y1="84.4682" x2="346.621" y2="231.73" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_73_770" x1="69.174" y1="84.9682" x2="346.621" y2="232.23" gradientUnits="userSpaceOnUse">
 <stop stop-color="#DAEBFF"/>
 <stop offset="1" stop-color="#B3C1E3"/>
 </linearGradient>

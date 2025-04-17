@@ -1,3 +1,17 @@
+:root {
+  --main-color-rgb: 251, 49, 49; /* 고객 지정 메인컬러 */
+  --main-color: rgb(var(--main-color-rgb));
+  --main-color-80: rgba(var(--main-color-rgb), 0.8);
+  --main-color-70: rgba(var(--main-color-rgb), 0.7);
+  --main-color-60: rgba(var(--main-color-rgb), 0.6);
+  --main-color-50: rgba(var(--main-color-rgb), 0.5);
+  --main-color-30: rgba(var(--main-color-rgb), 0.3);
+  --main-color-20: rgba(var(--main-color-rgb), 0.2);
+  --main-color-10: rgba(var(--main-color-rgb), 0.1);
+  
+}
+
+
 .marquee-container {
   width: 90%;
   height: 40px;
@@ -144,7 +158,7 @@ body {
 }
 
 .lottery-bar {
-  background-color: #e8eaf4;
+  background-color: #f0f0f0;
   padding: 16px;
 }
 
@@ -153,7 +167,7 @@ body {
   border-radius: 8px;
   width: 100%;
   padding: 16px;
-  background: #d6daf2;
+  background: var(--main-color-20);
 }
 
 .lotterybar-normal {
@@ -181,7 +195,7 @@ body {
   margin-left: 0;
   font-weight: bold;
   font-size: 16px;
-  color: rgb(6,82,200);
+  color: rgb(0, 0, 0);
 }
 
 .title-big {
@@ -238,8 +252,18 @@ body {
   font-size: 16px;
   padding: 12px;
   width: 100%;
-  background: rgb(4,82,200);
+  border-color: transparent;
+  background: var(--main-color);
   font-weight: bold;
+}
+.request-btn:hover,
+.request-btn:active,
+.request-btn:focus,
+.request-low-btn:hover,
+.request-low-btn:active,
+.request-low-btn:focus {
+  background: var(--main-color-80) !important;
+  border-color: transparent !important;
 }
 
 .request-low-btn {
@@ -248,8 +272,8 @@ body {
   width: 100%;
   background: rgb(255,255,255);
   font-weight: bold;
-  color: rgb(4,82,200);
-  border-style: solid;
+  color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .input-basic {
@@ -267,3 +291,19 @@ body {
   width: 100px;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color:var(--main-color-30);
+  color: #000000bb;
+}
+
+#colorPicker{
+  border: 1px solid #666;
+  border-radius: 8px;
+}
+
+#color-picker-menu{
+  display: flex;
+justify-content: center;
+gap: 8px;
+  padding: 0 8px;
+}
