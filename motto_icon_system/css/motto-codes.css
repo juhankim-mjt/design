@@ -10,7 +10,7 @@
 .icon-point:before { content: '\e808'; } /* '' */
 .icon-link:before { content: '\e809'; } /* '' */
 .icon-coupon:before { content: '\e80a'; } /* '' */
-.icon-ticket:before { content: '\e80b'; } /* '' */
+.icon-ticket-fill:before { content: '\e80b'; } /* '' */
 .icon-truck:before { content: '\e80c'; } /* '' */
 .icon-arrow-left:before { content: '\e80d'; } /* '' */
 .icon-arrow-down:before { content: '\e80e'; } /* '' */
@@ -66,3 +66,5 @@
 .icon-map-line:before { content: '\e840'; } /* '' */
 .icon-mobile-fill:before { content: '\e841'; } /* '' */
 .icon-mobile-line:before { content: '\e842'; } /* '' */
+.icon-ticket-use:before { content: '\e843'; } /* '' */
+.icon-ticket-line:before { content: '\e844'; } /* '' */

@@ -1,5 +1,5 @@
 :root {
-  --main-color-rgb: 251, 49, 49; /* 고객 지정 메인컬러 */
+  --main-color-rgb: 17, 87, 236; /* 고객 지정 메인컬러 */
   --main-color: rgb(var(--main-color-rgb));
   --main-color-80: rgba(var(--main-color-rgb), 0.8);
   --main-color-70: rgba(var(--main-color-rgb), 0.7);
@@ -8,7 +8,7 @@
   --main-color-30: rgba(var(--main-color-rgb), 0.3);
   --main-color-20: rgba(var(--main-color-rgb), 0.2);
   --main-color-10: rgba(var(--main-color-rgb), 0.1);
-  
+  --round-radius: 24px;
 }
 
 
@@ -211,7 +211,7 @@ body {
 .main-cardbox {
   background: #ffffff;
   padding: 8px;
-  border-radius: 16px;
+  border-radius: var(--round-radius);
   border: 1px solid rgb(204,204,204);
   padding-top: 0px;
 }
