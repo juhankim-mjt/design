@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>로또 휠 UI</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .wheel-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    select {
+      font-size: 24px;
+      padding: 10px;
+      height: 120px;
+      width: 70px;
+      writing-mode: vertical-lr;
+      text-align: center;
+      overflow-y: scroll;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>로또 번호 선택 휠</h2>
+  <div class="wheel-container" id="wheels"></div>
+  <div class="result" id="result"></div>
+
+  <script>
+    const wheelCount = 6;
+    const maxNum = 45;
+
+    const wheelsEl = document.getElementById("wheels");
+    const resultEl = document.getElementById("result");
+    const wheels = [];
+
+    function createOption(num) {
+      const option = document.createElement("option");
+      option.value = num;
+      option.textContent = num;
+      return option;
+    }
+
+    function getAllSelected() {
+      return wheels.map(wheel => parseInt(wheel.value, 10));
+    }
+
+    function refreshResult() {
+      const selected = getAllSelected();
+      resultEl.textContent = `선택된 숫자: ${selected.join(', ')}`;
+    }
+
+    function fixDuplicates(changedIndex) {
+      const selected = getAllSelected();
+      const seen = new Set();
+
+      for (let i = 0; i < wheelCount; i++) {
+        let val = selected[i];
+        while (seen.has(val)) {
+          val = (val % maxNum) + 1;
+          selected[i] = val;
+        }
+        seen.add(val);
+        wheels[i].value = selected[i];
+      }
+
+      refreshResult();
+    }
+
+    // 초기 생성
+    for (let i = 0; i < wheelCount; i++) {
+      const select = document.createElement("select");
+
+      for (let j = 1; j <= maxNum; j++) {
+        select.appendChild(createOption(j));
+      }
+
+      // 초기 랜덤값 (중복 없이)
+      let val;
+      do {
+        val = Math.floor(Math.random() * maxNum) + 1;
+      } while (getAllSelected().includes(val));
+
+      select.value = val;
+
+      select.addEventListener("change", () => fixDuplicates(i));
+
+      wheels.push(select);
+      wheelsEl.appendChild(select);
+    }
+
+    refreshResult();
+  </script>
+</body>
+</html>
