@@ -72,3 +72,7 @@
 .icon-arrow-classic-left:before { content: '\e846'; } /* '' */
 .icon-arrow-classic-right:before { content: '\e847'; } /* '' */
 .icon-arrow-classic-up:before { content: '\e848'; } /* '' */
+.icon-cart-fill:before { content: '\e849'; } /* '' */
+.icon-cart-line:before { content: '\e84a'; } /* '' */
+.icon-home-fill:before { content: '\e84b'; } /* '' */
+.icon-home-line:before { content: '\e84c'; } /* '' */

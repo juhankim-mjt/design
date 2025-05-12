@@ -24,10 +24,12 @@
       overflow-y: scroll;
       background-color: #ebebeb;
       scroll-snap-type: y mandatory;
-      border: 2px solid #ccc;
+      /* border: 2px solid #ccc; */
       border-radius: 30px;
       font-size: 24px;
       text-align: center;
+      font-weight: bold;
+      box-shadow: inset -10px -12px 10px rgba(171, 184, 241, 0.8);
     }
 
     .wheel::-webkit-scrollbar {
@@ -38,8 +40,8 @@
       height: 40px;
       line-height: 40px;
       scroll-snap-align: center;
-      padding-top: 10px; /* Add padding to the top */
-      padding-bottom: 10px; /* Add padding to the bottom */
+      padding-top: 10px; 
+      padding-bottom: 10px; 
     }
 
     .highlight {
@@ -123,7 +125,25 @@
     }
 
     function getSelectedNumbers() {
-      return wheels.map(w => Math.round(w.scrollTop / 40) + 1);
+      return wheels.map(wheel => {
+        const items = wheel.querySelectorAll('.wheel-item');
+        const wheelCenter = wheel.getBoundingClientRect().top + wheel.clientHeight / 2;
+
+        let closest = null;
+        let closestDiff = Infinity;
+
+        items.forEach(item => {
+          const rect = item.getBoundingClientRect();
+          const itemCenter = rect.top + rect.height / 2;
+          const diff = Math.abs(itemCenter - wheelCenter);
+          if (diff < closestDiff) {
+            closestDiff = diff;
+            closest = item;
+          }
+        });
+
+        return parseInt(closest?.textContent) || 1;
+      });
     }
 
     function updateResult() {
